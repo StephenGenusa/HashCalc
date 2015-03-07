@@ -71,7 +71,7 @@ object Form1: TForm1
       end
       object edtSHA1Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 7
+        TabOrder = 8
         Position.X = 110.000000000000000000
         Position.Y = 368.000000000000000000
         Size.Width = 700.000000000000000000
@@ -88,7 +88,7 @@ object Form1: TForm1
       end
       object edtSHA256Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 8
+        TabOrder = 9
         Position.X = 110.000000000000000000
         Position.Y = 400.000000000000000000
         Size.Width = 700.000000000000000000
@@ -129,7 +129,7 @@ object Form1: TForm1
       end
       object edtHavalHash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 24
+        TabOrder = 37
         Position.X = 110.000000000000000000
         Position.Y = 560.000000000000000000
         Size.Width = 700.000000000000000000
@@ -160,7 +160,7 @@ object Form1: TForm1
         Size.Width = 700.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 22
+        TabOrder = 35
         TextSettings.WordWrap = True
       end
       object memSHA384Hash: TMemo
@@ -170,7 +170,7 @@ object Form1: TForm1
         Size.Width = 700.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 9
+        TabOrder = 21
         TextSettings.WordWrap = True
       end
       object lblRipeMD160: TLabel
@@ -183,7 +183,7 @@ object Form1: TForm1
       end
       object edtRipeMD160Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 5
+        TabOrder = 6
         Position.X = 110.000000000000000000
         Position.Y = 336.000000000000000000
         Size.Width = 700.000000000000000000
@@ -331,6 +331,9 @@ object Form1: TForm1
       object cbCreateHashFiles: TCheckBox
         Position.X = 480.000000000000000000
         Position.Y = 624.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
         TabOrder = 34
         Text = 'Create Hash Files'
       end
