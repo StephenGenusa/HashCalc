@@ -26,17 +26,17 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
-            <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HashCalc.app\Contents\Resources\</RemoteDir>
+            <RemoteName>HashCalc.icns</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>HashCalc.app\Contents\Resources\</RemoteDir>
-            <RemoteName>HashCalc.icns</RemoteName>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -58,9 +58,34 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="OSX32\Debug\HashCalc.rsm" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HashCalc.app\Contents\Resources\</RemoteDir>
+            <RemoteName>HashCalc.icns</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX32\Release\HashCalc.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HashCalc.app\../\</RemoteDir>
+            <RemoteName>HashCalc.entitlements</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX32\Release\HashCalc" Condition="'$(Config)'=='Release'">
             <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>HashCalc.rsm</RemoteName>
+            <RemoteName>HashCalc</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="OSX32\Release\HashCalc.info.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HashCalc.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -86,14 +111,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="Win64\Debug\HashCalc.rsm" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>HashCalc\</RemoteDir>
-            <RemoteName>HashCalc.rsm</RemoteName>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
         </DeployFile>
     </ItemGroup>
 </Project>
