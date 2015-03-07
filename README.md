@@ -8,6 +8,7 @@ You can drag-and-drop and file on the drop target of the form or you can give a 
 
 There is also a Base64 text encoder and decoder on the second tab as a convenience tool.
 
+[Binaries](https://github.com/StephenGenusa/HashCalc/releases) are available for download.
 
 ![HashCalc OS X](https://raw.github.com/StephenGenusa/HashCalc/master/OSX_SS.png)
 <br />HashCalc on OS X
