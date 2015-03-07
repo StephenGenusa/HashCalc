@@ -1,0 +1,382 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Stephen Genusa'#39's Hash Calculator and Base64 Utility'
+  ClientHeight = 686
+  ClientWidth = 851
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object tabBase64: TTabControl
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 833.000000000000000000
+    Size.Height = 673.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 84.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'File Hashing'
+      object DropTarget1: TDropTarget
+        Filter = '*.*'
+        Position.X = 32.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 769.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Drop File Here'
+        OnDragOver = DropTarget1DragOver
+        OnDropped = DropTarget1Dropped
+      end
+      object edtMD5Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 2
+        Position.X = 110.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblMD5: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'MD5:'
+      end
+      object lblFilename: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 112.000000000000000000
+        Position.Y = 176.000000000000000000
+        Size.Width = 697.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Style = [fsBold]
+        Text = 'n/a'
+      end
+      object edtSHA1Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 110.000000000000000000
+        Position.Y = 368.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblSHA1: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 368.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'SHA1:'
+      end
+      object edtSHA256Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 8
+        Position.X = 110.000000000000000000
+        Position.Y = 400.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblSHA256: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 400.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'SHA256:'
+      end
+      object lblSHA384: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 432.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'SHA384:'
+      end
+      object lblSHA512: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'SHA512:'
+      end
+      object lblHaval: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 560.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Haval:'
+      end
+      object edtHavalHash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 24
+        Position.X = 110.000000000000000000
+        Position.Y = 560.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblMD4: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 240.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'MD4:'
+      end
+      object edtMD4Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 110.000000000000000000
+        Position.Y = 240.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object memSHA512Hash: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Position.X = 110.000000000000000000
+        Position.Y = 496.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 22
+        TextSettings.WordWrap = True
+      end
+      object memSHA384Hash: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Position.X = 110.000000000000000000
+        Position.Y = 432.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        TextSettings.WordWrap = True
+      end
+      object lblRipeMD160: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 336.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Ripe MD-160:'
+      end
+      object edtRipeMD160Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        Position.X = 110.000000000000000000
+        Position.Y = 336.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblRipeMD128: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 304.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Ripe MD-128:'
+      end
+      object edtRipeMD128Hash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 110.000000000000000000
+        Position.Y = 304.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lblTiger: TLabel
+        Position.X = 5.000000000000000000
+        Position.Y = 592.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Tiger:'
+      end
+      object edtTigerHash: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 10
+        Position.X = 110.000000000000000000
+        Position.Y = 592.000000000000000000
+        Size.Width = 700.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object pgbarFileRead: TProgressBar
+        Orientation = Horizontal
+        Position.X = 32.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 769.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object cbMD4: TCheckBox
+        Position.X = 810.000000000000000000
+        Position.Y = 242.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 11
+      end
+      object cbMD5: TCheckBox
+        IsChecked = True
+        Position.X = 810.000000000000000000
+        Position.Y = 274.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+      end
+      object cbRipeMD128: TCheckBox
+        Position.X = 810.000000000000000000
+        Position.Y = 306.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 13
+      end
+      object cbRipeMD160: TCheckBox
+        Position.X = 810.000000000000000000
+        Position.Y = 338.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 14
+      end
+      object cbSHA1: TCheckBox
+        IsChecked = True
+        Position.X = 810.000000000000000000
+        Position.Y = 370.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 15
+      end
+      object cbSHA256: TCheckBox
+        IsChecked = True
+        Position.X = 810.000000000000000000
+        Position.Y = 402.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 16
+      end
+      object cbSHA384: TCheckBox
+        Position.X = 810.000000000000000000
+        Position.Y = 442.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+      end
+      object cbSHA512: TCheckBox
+        IsChecked = True
+        Position.X = 810.000000000000000000
+        Position.Y = 506.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 18
+      end
+      object cbHaval: TCheckBox
+        Position.X = 810.000000000000000000
+        Position.Y = 562.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 19
+      end
+      object cbTiger: TCheckBox
+        Enabled = False
+        Position.X = 810.000000000000000000
+        Position.Y = 594.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 20
+      end
+      object cbLowercaseHashes: TCheckBox
+        IsChecked = True
+        Position.X = 648.000000000000000000
+        Position.Y = 624.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 33
+        Text = 'Lowercase Hashes'
+        OnChange = cbLowercaseHashesChange
+      end
+      object cbCreateHashFiles: TCheckBox
+        Position.X = 480.000000000000000000
+        Position.Y = 624.000000000000000000
+        TabOrder = 34
+        Text = 'Create Hash Files'
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 57.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Base64'
+      object memoPlainText: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Position.X = 56.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 737.000000000000000000
+        Size.Height = 249.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+      end
+      object btnEncode: TButton
+        Position.X = 16.000000000000000000
+        Position.Y = 32.000000000000000000
+        TabOrder = 11
+        Text = 'Encode'
+        OnClick = btnEncodeClick
+      end
+      object memoBase64Text: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Position.X = 48.000000000000000000
+        Position.Y = 360.000000000000000000
+        Size.Width = 737.000000000000000000
+        Size.Height = 249.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+      end
+      object btnDecode: TButton
+        Position.X = 16.000000000000000000
+        Position.Y = 328.000000000000000000
+        TabOrder = 9
+        Text = 'Decode'
+        OnClick = btnDecodeClick
+      end
+    end
+  end
+end

@@ -1,0 +1,10 @@
+inherited Form1_Macintosh: TForm1_Macintosh
+  ClientHeight = 686
+  ClientWidth = 804
+  DesignerMasterStyle = 1
+  inherited Button1: TButton
+    Position.X = 648.000000000000000000
+    Position.Y = 600.000000000000000000
+    OnClick = Button1Click
+  end
+end

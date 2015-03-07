@@ -1,0 +1,17 @@
+inherited Form1_Windows: TForm1_Windows
+  Caption = 'Stephen Genusa'#39's Hash Calculator'
+  ClientHeight = 603
+  ClientWidth = 713
+  DesignerMasterStyle = 1
+  inherited Button1: TButton
+    OnClick = Button1Click
+  end
+  inherited DropTarget1: TDropTarget
+    Filter = '*'
+    Position.X = 264.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Drop File Here'
+    OnDragOver = DropTarget1DragOver
+    OnDropped = DropTarget1Dropped
+  end
+end
