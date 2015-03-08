@@ -6,7 +6,7 @@
         <MainSource>HashCalc.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>7</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -310,6 +310,14 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="OSX32\Debug\HashCalc" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="OSX32">
                         <RemoteName>HashCalc</RemoteName>
@@ -319,14 +327,6 @@
                 <DeployFile LocalName="$(BDS)\bin\delphi_PROJECTICNS.icns" Configuration="Debug" Class="ProjectOSXResource">
                     <Platform Name="OSX32">
                         <RemoteName>HashCalc.icns</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -355,6 +355,12 @@
                 </DeployFile>
                 <DeployFile LocalName="OSX32\Release\HashCalc.entitlements" Configuration="Release" Class="ProjectOSXEntitlements">
                     <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Release\HashCalc.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>HashCalc.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

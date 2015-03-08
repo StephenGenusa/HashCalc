@@ -71,7 +71,7 @@ object Form1: TForm1
       end
       object edtSHA1Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 8
+        TabOrder = 9
         Position.X = 110.000000000000000000
         Position.Y = 368.000000000000000000
         Size.Width = 700.000000000000000000
@@ -88,7 +88,7 @@ object Form1: TForm1
       end
       object edtSHA256Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 9
+        TabOrder = 21
         Position.X = 110.000000000000000000
         Position.Y = 400.000000000000000000
         Size.Width = 700.000000000000000000
@@ -129,7 +129,7 @@ object Form1: TForm1
       end
       object edtHavalHash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 37
+        TabOrder = 52
         Position.X = 110.000000000000000000
         Position.Y = 560.000000000000000000
         Size.Width = 700.000000000000000000
@@ -160,7 +160,7 @@ object Form1: TForm1
         Size.Width = 700.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 35
+        TabOrder = 50
         TextSettings.WordWrap = True
       end
       object memSHA384Hash: TMemo
@@ -170,7 +170,7 @@ object Form1: TForm1
         Size.Width = 700.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 21
+        TabOrder = 36
         TextSettings.WordWrap = True
       end
       object lblRipeMD160: TLabel
@@ -179,11 +179,11 @@ object Form1: TForm1
         Size.Width = 101.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
-        Text = 'Ripe MD-160:'
+        Text = 'RIPEMD-160:'
       end
       object edtRipeMD160Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
-        TabOrder = 6
+        TabOrder = 7
         Position.X = 110.000000000000000000
         Position.Y = 336.000000000000000000
         Size.Width = 700.000000000000000000
@@ -196,7 +196,7 @@ object Form1: TForm1
         Size.Width = 101.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
-        Text = 'Ripe MD-128:'
+        Text = 'RIPEMD-128:'
       end
       object edtRipeMD128Hash: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -319,8 +319,8 @@ object Form1: TForm1
       end
       object cbLowercaseHashes: TCheckBox
         IsChecked = True
-        Position.X = 648.000000000000000000
-        Position.Y = 624.000000000000000000
+        Position.X = 624.000000000000000000
+        Position.Y = 622.000000000000000000
         Size.Width = 161.000000000000000000
         Size.Height = 19.000000000000000000
         Size.PlatformDefault = False
@@ -329,13 +329,23 @@ object Form1: TForm1
         OnChange = cbLowercaseHashesChange
       end
       object cbCreateHashFiles: TCheckBox
-        Position.X = 480.000000000000000000
-        Position.Y = 624.000000000000000000
+        Position.X = 424.000000000000000000
+        Position.Y = 622.000000000000000000
         Size.Width = 137.000000000000000000
         Size.Height = 19.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 34
+        TabOrder = 35
         Text = 'Create Hash Files'
+      end
+      object cbCheckAgainstExistingHashFiles: TCheckBox
+        Position.X = 160.000000000000000000
+        Position.Y = 622.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 34
+        Text = 'Check Against Existing Hash Files'
+        Visible = False
       end
     end
     object TabItem2: TTabItem

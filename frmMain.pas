@@ -56,6 +56,7 @@ type
     cbTiger: TCheckBox;
     cbLowercaseHashes: TCheckBox;
     cbCreateHashFiles: TCheckBox;
+    cbCheckAgainstExistingHashFiles: TCheckBox;
     procedure DropTarget1Dropped(Sender: TObject; const Data: TDragObject;
       const Point: TPointF);
     procedure DropTarget1DragOver(Sender: TObject; const Data: TDragObject;
@@ -78,7 +79,7 @@ type
     dcrypt_sha512: TDCP_sha512;
     dcrypt_tiger: TDCP_tiger;
     Hashes : array of TDCP_hash;
-    HashCheckboxes : array of TCheckbox;
+    //HashCheckboxes : array of TCheckbox;
     procedure ClearFieldHashValues;
     procedure EnableHashCheckboxes;
     procedure DisableHashCheckboxes;
@@ -231,16 +232,16 @@ procedure TForm1.CreateHashFiles(strFilename : String);
 
   procedure HandleFileExtension(HashCheckbox : TCheckBox; HashEditbox : TEdit; strFileExtension : String);
   var
-    intLen : Integer;
+    //intLen : Integer;
     strCurExt : String;
     strHashFilename : String;
   begin
-    intLen := Length(strFilename);
+    //intLen := Length(strFilename);
     strCurExt := LowerCase(TPath.GetExtension(strFilename));
     if HashCheckbox.IsChecked and (strCurExt <> strFileExtension) then begin
       strHashFilename := strFilename + strFileExtension;
       if not FileExists(strHashFilename) then
-        WriteHashFile(strHashFilename, HashEditbox.Text + ' ' + strFilename);
+        WriteHashFile(strHashFilename, LowerCase(HashEditbox.Text) + ' ' + TPath.GetFileName(strFilename));
     end;
   end;
 

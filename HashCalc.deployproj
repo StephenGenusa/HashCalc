@@ -17,6 +17,14 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="OSX32\Debug\HashCalc" Condition="'$(Config)'=='Debug'">
             <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
             <RemoteName>HashCalc</RemoteName>
@@ -29,14 +37,6 @@
         <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Debug'">
             <RemoteDir>HashCalc.app\Contents\Resources\</RemoteDir>
             <RemoteName>HashCalc.icns</RemoteName>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
-            <RemoteDir>HashCalc.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -106,6 +106,15 @@
         <DeployFile Include="Win64\Debug\HashCalc.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>HashCalc\</RemoteDir>
             <RemoteName>HashCalc</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="Win64\Release\HashCalc.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HashCalc\</RemoteDir>
+            <RemoteName>HashCalc.exe</RemoteName>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
