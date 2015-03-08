@@ -1,6 +1,6 @@
 #HashCalc -- A File Hash Calculator for Win32, Win64 and OS X
 
-This is an experimental project using Embarcadero Delphi XE7. It also uses the [DCPrypt](https://github.com/StephenGenusa/DCPCrypt) library for the hash functions.
+This is an experimental project using Embarcadero Delphi XE7. It also uses the [DCPCrypt](https://github.com/StephenGenusa/DCPCrypt) library for the hash functions.
 
 It will currently calculate file hashes for MD4, MD5, Ripe MD-128, Ripe MD-160, SHA1, SHA256, SHA384, SHA512, Tiger and Haval -- the hash methods found in DCrypt.
 
